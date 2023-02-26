@@ -29,8 +29,8 @@ body {
     /* align-content: center; */
 }
 
-.add{
-    /* margin: 2rem ; */
+h1 i{
+    color: #007bff;
 }
 
 #myInput {
@@ -38,42 +38,149 @@ body {
     box-shadow: 0px 0px 17px -2px rgb(159, 159, 159);
     border: none;
     background: none;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 3rem;
     width: 40rem;
-
 }
 
-#myInput:focus {
-    /* border: 1px solid red; */
-    /* border:; */
+#myInput:focus{
+    /* background-color: black; */
+    border: 1px solid #007bff;
+    outline: none;
 }
 
 .add-btn {
     cursor: pointer;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     background-color: #007bff;
     color: #ffffff;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border:none;
+    font-size: 1rem;
+}
+
+
+.add i{
+    position: absolute;
+    /* background-color: black; */
+    /* color: white; */
+    padding: 1rem;
+
 }
 
 .add-btn:hover{
     background-color: #000000;
 }
 
-.list{
-    /* border: 1px solid red; */
-    margin: 1rem;
-    padding: 0;
+#myWork{
+    margin: 1rem auto 1rem auto;
     cursor: pointer;
 }
 
-.list ul li{
+ul{
+    /* margin:0; */
+    padding:0;
+}
+
+ul li{
+    position: relative;
     list-style: none;
     width: 110vh;
     box-shadow: 0px 0px 17px -2px rgb(159, 159, 159);
-    /* background-color: red; */
-    margin: 1rem 0;
-    padding: 0.8rem 0.5rem;
+    margin: 0.5rem auto;
+    padding: 0.8rem 3rem;
 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+ul li:hover{
+    background-color: black;
+    color: white;
+}
+
+ul li:nth-child(odd){
+    /* background-color: rgb(248, 245, 245); */
+    /* color: wheat; */
+}
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+.alert{
+    opacity: 0;
+    position: absolute;
+    display: block;
+    /* width: 25rem; */
+    background-color: white;
+    padding: 1rem;
+    top: 35%;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 17px -2px rgb(159, 159, 159);
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+
+    /* color: white; */
+}
+
+.alert div{
+    line-height: 0;
+    box-sizing: border-box;
+}
+
+.fa-exclamation-circle{
+    font-size: 2rem;
+    background-color: #007bff;
+    padding: 1rem 1rem;
+    color: white;
+    border-radius: 2rem;
+    margin: 0 1rem 0 0;
+}
+
+.fa-close{
+    margin: 0 0 0 4rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.fa-close:hover{
+    color: #f44336;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+.minik{
+    line-height: 1rem;
+    font-size: 60%;
 }
